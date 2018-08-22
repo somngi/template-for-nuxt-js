@@ -1,0 +1,138 @@
+/* === styles.scss =====
+   Version:  1.0.0
+    Author:  Mirza Hodzic / COIDEA
+      Desc:  COIDEA is a web design and development blog that publishes articles and tutorials about the latest web trends, 
+             techniques and new possibilities. 
+   Website:  https://www.coidea.website
+  ================ */
+
+  // fonts
+  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,900|Source+Code+Pro:300,400,700|Material+Icons');
+
+  // partials
+  @import '~/assets/scss/partials/_variables.scss';   
+  @import '~/assets/scss/partials/_mixins.scss';      
+
+  /* === shared === */
+
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    color: $black;
+    background-color: $white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #__nuxt {
+    padding: 0;
+    margin: 0;
+    overflow: hidden !important;
+  }
+
+  a {
+    outline: 0px none !important;
+    outline: 0px !important;
+    &.nuxt-link-exact-active {
+      color: $blue !important;
+      font-weight: 700 !important;
+    }
+  }
+
+
+  /* === page transitions === */
+
+  .page-enter-active, .page-leave-active {
+    transition: opacity .5s
+  }
+  .page-enter, .page-leave-active {
+    opacity: 0
+  }
+  
+  .layout-enter-active, .layout-leave-active {
+    transition: opacity 0.5s
+  }
+  .layout-enter, .layout-leave-active {
+    opacity: 0
+  }
+
+
+  /* === highlight.js === */
+
+  .hljs-comment,.hljs-quote{
+    color:#8EDCFC
+  }
+  
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag,
+  .hljs-name,
+  .hljs-selector-id,
+  .hljs-selector-class,
+  .hljs-regexp,
+  .hljs-deletion{
+    color:#E9676A;
+    font-weight: 700;
+  }
+  
+  .hljs-number,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-literal,
+  .hljs-type,
+  .hljs-params,
+  .hljs-meta,
+  .hljs-link{
+    color:#ececec
+  }
+  
+  .hljs-attribute,
+  .hljs-attr,
+  .hljs-title{
+    color:#EDBA6D
+  }
+  
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-addition{
+    color:#487FFF
+  }
+  
+  .hljs-section{
+    color:#8fa1b3
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag{
+    color:#43b6e2
+  }
+  
+  .hljs{
+    display: block;
+    overflow-x: auto;
+    background: $white;
+    color: $black;
+    padding: 18px 21px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .hljs-emphasis{
+    font-style:italic
+  }
+  
+  .hljs-strong{
+    font-weight:700
+  }
